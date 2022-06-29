@@ -8,7 +8,10 @@
 
 string a1, b1;
 int a, b;
+bool isParsed, isParsed2;
 Console.WriteLine("Let's sum up two numbers.");
+
+// 1st solution
 
 for (int i = 0; ; i++)
 {
@@ -26,6 +29,29 @@ for (int i = 0; ; i++)
         break;
     }
     catch (Exception ex)
+    {
+        Console.WriteLine("It's not a number.\n");
+    }
+}
+
+// 2nd solution
+for (; ;)
+{
+    Console.WriteLine("Input 1st number.");
+    a1 = Console.ReadLine();
+
+    Console.WriteLine("Input 2nd number.");
+    b1 = Console.ReadLine();
+
+    isParsed = int.TryParse(a1, out a);
+    isParsed2 = int.TryParse(b1, out b);
+
+    if (isParsed == true && isParsed2 == true)
+    {
+        Console.WriteLine("The sum is " + (a + b));
+        break;
+    }
+    else
     {
         Console.WriteLine("It's not a number.\n");
     }
