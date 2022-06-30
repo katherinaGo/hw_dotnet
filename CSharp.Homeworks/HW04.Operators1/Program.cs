@@ -3,11 +3,10 @@
 //• Запрос числа 2 (ввод с клавиатуры) 
 //• Вывод суммы этих чисел  
 //• В случае не валидного ввода данных (любой символ отличны от числа) – вывод сообщения на 
-//экран, о том, что введенный символ не является числом и снова попросить пользователя ввести 
-//число
+//экран, о том, что введенный символ не является числом и снова попросить пользователя ввести число
 
 string a1, b1;
-int a, b;
+double a, b;
 bool isParsed, isParsed2;
 Console.WriteLine("Let's sum up two numbers.");
 
@@ -23,9 +22,9 @@ for (int i = 0; ; i++)
         Console.WriteLine("Input 2nd number.");
         b1 = Console.ReadLine();
 
-        a = Convert.ToInt32(a1);
-        b = Convert.ToInt32(b1);
-        Console.WriteLine("The sum is " + (a + b));
+        a = Convert.ToDouble(a1);
+        b = Convert.ToDouble(b1);
+        Console.WriteLine("The result is " + (a + b));
         break;
     }
     catch (Exception ex)
@@ -43,8 +42,8 @@ for (; ;)
     Console.WriteLine("Input 2nd number.");
     b1 = Console.ReadLine();
 
-    isParsed = int.TryParse(a1, out a);
-    isParsed2 = int.TryParse(b1, out b);
+    isParsed = double.TryParse(a1, out a);
+    isParsed2 = double.TryParse(b1, out b);
 
     if (isParsed == true && isParsed2 == true)
     {

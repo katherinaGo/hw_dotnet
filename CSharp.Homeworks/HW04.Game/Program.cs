@@ -7,31 +7,28 @@
 //• Вывести результат решения на экран. В случае отсутствия необходимости перемещения 
 //вывести соответствующее сообщение.
 
-const string up = "W";
-const string down = "S";
-const string left = "A";
-const string right = "D";
+string letter;
 
-for (int i = 0; i <= 5; i++)
+for (; ; )
 {
-    Console.WriteLine("Type symbol from keyboard.");
-    string letter = Console.ReadLine();
-    switch (letter)
+    Console.WriteLine("Type symbol from keyboard");
+    letter = Console.ReadLine();
+    switch (letter.ToLower())
     {
-        case up:
+        case "w":
             Console.WriteLine("The player goes up.");
             break;
-        case down:
+        case "s":
             Console.WriteLine("The player goes down.");
             break;
-        case left:
+        case "a":
             Console.WriteLine("The player goes left.");
             break;
-        case right:
+        case "d":
             Console.WriteLine("The player goes right.");
             break;
         default:
-            Console.WriteLine("Something went wrong. Ops...");
+            Console.WriteLine("You don't need to do anywhere.");
             break;
     }
 }

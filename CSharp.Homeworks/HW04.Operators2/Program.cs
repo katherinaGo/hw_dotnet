@@ -5,9 +5,13 @@
 //• Запрос результата вычисления
 //• Вывод “Правильно” или “Неправильно”
 
-string a1, b1;
-double a, b, result, sum;
+string a1, b1, c;
+double a, b, result, inputResult;
+bool isParsedA, isParsedB, isParsedResult;
+
 Console.WriteLine("Let's sum up two numbers.");
+
+// 1 solition
 
 for (int i = 0; ; i++)
 {
@@ -22,11 +26,21 @@ for (int i = 0; ; i++)
         b = Convert.ToDouble(b1);
 
         result = a + b;
+        break;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("It's not a number.\n");
+    }
+}
 
-        Console.WriteLine("What is the sum? Type please.");
-        sum = Convert.ToDouble(Console.ReadLine());
-
-        if (sum == result)
+do
+{
+    try
+    {
+        Console.WriteLine("What is the total result? Type please.");
+        inputResult = Convert.ToDouble(Console.ReadLine());
+        if (inputResult == result)
         {
             Console.WriteLine("That's correct!");
         }
@@ -36,8 +50,50 @@ for (int i = 0; ; i++)
         }
         break;
     }
-    catch (Exception ex)
+    catch (Exception)
     {
         Console.WriteLine("It's not a number.\n");
     }
+} while (true);
+
+
+// 2 solution
+
+for (; ; )
+{
+    Console.WriteLine("Input 1st number.");
+    a1 = Console.ReadLine();
+
+    Console.WriteLine("Input 2nd number.");
+    b1 = Console.ReadLine();
+
+    isParsedA = double.TryParse(a1, out a);
+    isParsedB = double.TryParse(b1, out b);
+
+    if (isParsedA == true && isParsedB == true)
+    {
+        result = a + b;
+        break;
+    }
+    else
+    {
+        Console.WriteLine("It's not a number.\n");
+    }
+}
+
+for (; ; )
+{
+    Console.WriteLine("What is the total result? Type please.");
+    c = Console.ReadLine();
+    isParsedResult = double.TryParse(c, out inputResult);
+
+    if (isParsedResult == true && result == inputResult)
+    {
+        Console.WriteLine("That's correct!");
+    }
+    else
+    {
+        Console.WriteLine("Wrong answer!");
+    }
+    break;
 }

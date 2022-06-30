@@ -1,15 +1,18 @@
 ﻿//Изменить предыдущий алгоритм. Пускай он теперь выводит не только информацию правильно или неправильно, но и дополнительно,
-//ожидается число больше или меньше указанного.
-//Требование к интерфейсу.
+//ожидается число больше или меньше указанного. Требование к интерфейсу.
 //• Запрос числа 1
 //• Запрос числа 2
 //• Запрос результата вычисления
 //• Вывод “Правильно” или “Неправильно”
 //• Вывод “Должно быть больше” или “Должно быть меньше”
 
-string a1, b1;
-double a, b, result, sum;
-Console.WriteLine("Let's sum up two numbers.");
+string a1, b1, c;
+double a, b, result, inputResult;
+bool isParsedA, isParsedB, isParsedResult;
+
+Console.WriteLine("Let's inputResult up two numbers.");
+
+// 1 solution
 
 for (int i = 0; ; i++)
 {
@@ -25,10 +28,10 @@ for (int i = 0; ; i++)
 
         result = a + b;
 
-        Console.WriteLine("What is the sum? Type please.");
-        sum = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("What is the total result? Type please.");
+        inputResult = Convert.ToDouble(Console.ReadLine());
 
-        if (sum == result)
+        if (inputResult == result)
         {
             Console.WriteLine("That's correct!");
         }
@@ -36,15 +39,13 @@ for (int i = 0; ; i++)
         {
             Console.WriteLine("Wrong answer!");
 
-            switch (result < sum & result != sum)
+            switch (result < inputResult & result != inputResult)
             {
                 case true:
                     Console.WriteLine("Your number should be less.");
                     break;
                 case false:
                     Console.WriteLine("Your number should be more.");
-                    break;
-                default:
                     break;
             }
         }
@@ -54,4 +55,54 @@ for (int i = 0; ; i++)
     {
         Console.WriteLine("It's not a number.\n");
     }
+}
+
+// 2 solution
+
+for (; ; )
+{
+    Console.WriteLine("Input 1st number.");
+    a1 = Console.ReadLine();
+    isParsedA = double.TryParse(a1, out a);
+
+    Console.WriteLine("Input 2nd number.");
+    b1 = Console.ReadLine();
+    isParsedB = double.TryParse(b1, out b);
+
+    if (isParsedA == true && isParsedB == true)
+    {
+        result = a + b;
+        break;
+    }
+    else
+    {
+        Console.WriteLine("It's not a number.\n");
+    }
+}
+
+for (; ; )
+{
+    Console.WriteLine("What is the total result? Type please.");
+    c = Console.ReadLine();
+    isParsedResult = double.TryParse(c, out inputResult);
+
+    if (isParsedResult == true && result == inputResult)
+    {
+        Console.WriteLine("That's correct!");
+    }
+    else
+    {
+        Console.WriteLine("Wrong answer!");
+
+        switch (result < inputResult & result != inputResult)
+        {
+            case true:
+                Console.WriteLine("Your number should be less.");
+                break;
+            case false:
+                Console.WriteLine("Your number should be more.");
+                break;
+        }
+    }
+    break;
 }
