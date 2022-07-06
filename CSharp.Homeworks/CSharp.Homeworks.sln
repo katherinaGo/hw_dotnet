@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.05.Task1", "HW.05.Task1\HW.05.Task1.csproj", "{7DD39DBE-1F86-46B6-AD13-92410F887DDC}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW04.Operators1", "HW04.Operators1\HW04.Operators1.csproj", "{0556A177-3F11-400F-B34B-9C98460839A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW04.Operators2", "HW04.Operators2\HW04.Operators2.csproj", "{869712D7-6EAA-4DF6-B7D4-EEC2A8148930}"
@@ -18,10 +18,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW04.Game", "HW04.Game\HW04
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW03.Birthday", "HW03.Birthday\HW03.Birthday.csproj", "{333A5FD7-0E40-4D01-A341-E64385C98178}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.01.Casting", "HW.01.Casting\HW.01.Casting.csproj", "{24B7492F-87B5-4688-A704-3621C11F3B4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.02.Types", "HW.02.Types\HW.02.Types.csproj", "{35928994-BB20-436E-9CDF-FE16A74AB4FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.05.Task2", "HW.05.Task2\HW.05.Task2.csproj", "{DCCC3376-D835-4B70-97D1-14A6CE0D8EC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW.03.QuadraticFormula", "HW.03.QuadraticFormula\HW.03.QuadraticFormula.csproj", "{8E4668C6-E381-4F41-887D-D1B6F84B8B08}"
-
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.05.Task3", "HW.05.Task3\HW.05.Task3.csproj", "{CF1A862D-F7B6-46DB-B692-34D85459338A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW.05.Task4", "HW.05.Task4\HW.05.Task4.csproj", "{4AA81094-F8FF-4B33-B878-2F72700E9AF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +30,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DD39DBE-1F86-46B6-AD13-92410F887DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD39DBE-1F86-46B6-AD13-92410F887DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD39DBE-1F86-46B6-AD13-92410F887DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD39DBE-1F86-46B6-AD13-92410F887DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCCC3376-D835-4B70-97D1-14A6CE0D8EC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCCC3376-D835-4B70-97D1-14A6CE0D8EC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCCC3376-D835-4B70-97D1-14A6CE0D8EC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCCC3376-D835-4B70-97D1-14A6CE0D8EC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF1A862D-F7B6-46DB-B692-34D85459338A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1A862D-F7B6-46DB-B692-34D85459338A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1A862D-F7B6-46DB-B692-34D85459338A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1A862D-F7B6-46DB-B692-34D85459338A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA81094-F8FF-4B33-B878-2F72700E9AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA81094-F8FF-4B33-B878-2F72700E9AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA81094-F8FF-4B33-B878-2F72700E9AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA81094-F8FF-4B33-B878-2F72700E9AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 		{0556A177-3F11-400F-B34B-9C98460839A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0556A177-3F11-400F-B34B-9C98460839A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0556A177-3F11-400F-B34B-9C98460839A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,7 +72,6 @@ Global
 		{2CB84B6D-3B98-4156-97CB-4957B16AD8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CB84B6D-3B98-4156-97CB-4957B16AD8F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
-
 		{333A5FD7-0E40-4D01-A341-E64385C98178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{333A5FD7-0E40-4D01-A341-E64385C98178}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{333A5FD7-0E40-4D01-A341-E64385C98178}.Release|Any CPU.ActiveCfg = Release|Any CPU
