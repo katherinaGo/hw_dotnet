@@ -45,7 +45,7 @@ for (; ;)
     isParsed = double.TryParse(a1, out a);
     isParsed2 = double.TryParse(b1, out b);
 
-    if (isParsed == true && isParsed2 == true)
+    if (isParsed.Equals(true) && isParsed2.Equals(true))
     {
         Console.WriteLine("The sum is " + (a + b));
         break;

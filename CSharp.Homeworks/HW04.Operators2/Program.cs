@@ -40,7 +40,7 @@ do
     {
         Console.WriteLine("What is the total result? Type please.");
         inputResult = Convert.ToDouble(Console.ReadLine());
-        if (inputResult == result)
+        if (inputResult.Equals(result))
         {
             Console.WriteLine("That's correct!");
         }
@@ -70,7 +70,7 @@ for (; ; )
     isParsedA = double.TryParse(a1, out a);
     isParsedB = double.TryParse(b1, out b);
 
-    if (isParsedA == true && isParsedB == true)
+    if (isParsedA.Equals(true) && isParsedB.Equals(true))
     {
         result = a + b;
         break;
@@ -87,7 +87,7 @@ for (; ; )
     c = Console.ReadLine();
     isParsedResult = double.TryParse(c, out inputResult);
 
-    if (isParsedResult == true && result == inputResult)
+    if (isParsedResult.Equals(true) && result.Equals(inputResult))
     {
         Console.WriteLine("That's correct!");
     }

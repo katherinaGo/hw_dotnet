@@ -68,7 +68,7 @@ for (; ; )
     }
 }
 
-if (inputPosition == msv1.Length)
+if (inputPosition.Equals(msv1.Length))
 {
     msv1[inputPosition - 1] = inputNumber;
 }

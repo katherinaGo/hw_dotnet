@@ -77,7 +77,7 @@ for (; ; )
     }
 }
 
-if (total == result)
+if (total.Equals(result))
 {
     Console.WriteLine("That's correct!");
 }
@@ -110,7 +110,7 @@ for (; ; )
     b1 = Console.ReadLine();
     isParsedB = double.TryParse(b1, out b);
 
-    if (isParsedA == true && isParsedB == true)
+    if (isParsedA.Equals(true) && isParsedB.Equals(true))
     {
         break;
     }
@@ -149,12 +149,12 @@ for (; ; )
     c = Console.ReadLine();
     isParsedResult = double.TryParse(c, out inputResult);
 
-    if (isParsedResult == true && result == inputResult)
+    if (isParsedResult.Equals(true) && result.Equals(inputResult))
     {
         Console.WriteLine("That's correct!");
         break;
     }
-    else if (isParsedResult == true & result != inputResult)
+    else if (isParsedResult.Equals(true) & !result.Equals(inputResult))
     {
         Console.WriteLine("Wrong answer!");
 
@@ -168,7 +168,7 @@ for (; ; )
                 break;
         }
     }
-    else if (isParsedResult == false)
+    else if (isParsedResult.Equals(false))
     {
         Console.WriteLine("Somethiing went wrond. Oops...");
     }
