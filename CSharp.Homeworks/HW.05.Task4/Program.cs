@@ -14,7 +14,7 @@ for (; ; )
     Console.WriteLine("Input any positive number > 0.");
     temp = Console.ReadLine();
     isParsed = int.TryParse(temp, out number);
-    if (isParsed == true & number > 0)
+    if (isParsed.Equals(true) & number > 0)
     {
         Console.WriteLine("Let' count all numbers from 1 to your number " + number + ": ");
         break;
