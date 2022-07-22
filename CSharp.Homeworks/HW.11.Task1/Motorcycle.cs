@@ -7,17 +7,33 @@ public class Motorcycle : BaseEntity
     private int _year;
     private int _odometer;
 
-    public string Name => _name;
+    public string Name
+    {
+        get => _name;
+        set => _name = value;
+    }
 
-    public string Model => _model;
+    public string Model
+    {
+        get => _model;
+        set => _model = value;
+    }
 
-    public int Year => _year;
+    public int Year
+    {
+        get => _year;
+        set => _year = value;
+    }
 
-    public int Odometer => _odometer;
+    public int Odometer
+    {
+        get => _odometer;
+        set => _odometer = value;
+    }
 
     public Motorcycle(string name, string model, int year, int odometer)
     {
-         Id = Guid.NewGuid();
+        Id = Guid.NewGuid();
         _name = name;
         _model = model;
         _year = year;
@@ -26,6 +42,6 @@ public class Motorcycle : BaseEntity
 
     public override string ToString()
     {
-        return String.Format("Name:'{0}'; Model: '{1}', Year of issue: '{2}', Odometr: '{3}'.\n", _name, _model, _year, _odometer);
+        return $"Name:'{_name}'; Model: '{_model}', Year of issue: '{_year}', Odometer: '{_odometer}'.\n";
     }
 }

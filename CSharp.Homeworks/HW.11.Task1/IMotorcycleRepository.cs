@@ -2,14 +2,13 @@ namespace HW._11.Task1;
 
 public interface IMotorcycleRepository
 {
-    public Motorcycle GetMotorcycleByID(Motorcycle motorcycle, Guid idOfBike);
+    public Motorcycle GetMotorcycleByID(Guid id);
 
     public void GetAllMotorcycles();
 
-    public void CreateMotorcycle(string name, string model, int year, int odometr);
+    public Motorcycle CreateMotorcycle(string name, string model, int year, int odometer);
 
-    public void UpdateMotorcycle();
+    public Motorcycle UpdateMotorcycle(Motorcycle motorcycle, string name, string model, int year, int odometer);
 
     public void DeleteMotorcycle(Motorcycle motorcycle);
-
 }
