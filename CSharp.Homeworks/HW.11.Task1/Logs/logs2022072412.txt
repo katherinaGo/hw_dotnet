@@ -1,0 +1,19 @@
+2022-07-24 12:16:33.854 +03:00 [INF] 2022-07-24 09:16:33 UTC; Program starts
+2022-07-24 12:16:33.885 +03:00 [INF] 2022-07-24 09:16:33 UTC; Motorcycle '6e1b5c19-8595-4eee-9e1a-fc9d23ae407a' with name 'VW' was created and added to the list
+2022-07-24 12:16:33.887 +03:00 [INF] 2022-07-24 09:16:33 UTC; Motorcycle '310ebf95-fa5a-4b46-bf74-42f680c24357' with name 'BMW' was created and added to the list
+2022-07-24 12:16:33.889 +03:00 [INF] 2022-07-24 09:16:33 UTC; Motorcycle 'aae88713-1dfe-4f4a-931e-5ea9fad577f4' with name 'Honda' was created and added to the list
+2022-07-24 12:16:33.891 +03:00 [INF] 2022-07-24 09:16:33 UTC; Motorcycle 'c7f1f303-4bf1-4e3a-9cad-9d97ac184f1a' with name 'Minsk' was created and added to the list
+2022-07-24 12:16:33.893 +03:00 [ERR] 2022-07-24 09:16:33 UTC; Nothing was found
+2022-07-24 12:16:33.896 +03:00 [INF] Bike '310ebf95-fa5a-4b46-bf74-42f680c24357', Name:'BMW'; Model: 'redLine', Year of issue: '2019', Odometer: '20000'.
+ is going to be updated... Wait a second. It's changed to: 
+
+2022-07-24 12:16:33.898 +03:00 [INF] Bike 'aae88713-1dfe-4f4a-931e-5ea9fad577f4', Name:'Honda'; Model: 'x5', Year of issue: '2012', Odometer: '5000'.
+ is going to be updated... Wait a second. It's changed to: 
+
+2022-07-24 12:16:33.900 +03:00 [INF] Bike 'c7f1f303-4bf1-4e3a-9cad-9d97ac184f1a', Name:'Minsk'; Model: '200S', Year of issue: '1994', Odometer: '4500'.
+ is going to be updated... Wait a second. It's changed to: 
+
+2022-07-24 12:16:33.902 +03:00 [INF] 2022-07-24 09:16:33 UTC; All bikes are displayed
+2022-07-24 12:16:33.904 +03:00 [INF] 2022-07-24 09:16:33 UTC; Motorcycle 'c7f1f303-4bf1-4e3a-9cad-9d97ac184f1a', with name 'Minsk' was removed from the list
+2022-07-24 12:16:33.906 +03:00 [INF] 2022-07-24 09:16:33 UTC; All bikes are displayed
+2022-07-24 12:16:33.908 +03:00 [INF] 2022-07-24 09:16:33 UTC; Program finished

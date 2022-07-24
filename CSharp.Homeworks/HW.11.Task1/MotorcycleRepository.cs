@@ -1,8 +1,13 @@
+using Serilog;
+using static HW._11.Task1.Logger;
+
 namespace HW._11.Task1;
 
 public class MotorcycleRepository : IMotorcycleRepository
 {
     private static List<Motorcycle> _motorcycles = new List<Motorcycle>();
+    private string _nothingWasFound = DateTime.UtcNow + " UTC; Nothing was found";
+    private string error = DateTime.UtcNow + " UTC; Something went wrong";
 
     public Motorcycle? GetMotorcycleByID(Guid id)
     {
@@ -14,7 +19,8 @@ public class MotorcycleRepository : IMotorcycleRepository
             }
         }
 
-        Console.WriteLine("Nothing was found.");
+        CreateLogger();
+        Log.Error(_nothingWasFound);
         return null;
     }
 
@@ -23,27 +29,31 @@ public class MotorcycleRepository : IMotorcycleRepository
         Console.WriteLine($"There are {_motorcycles.Count} in the list. The list of bikes here: ");
         foreach (Motorcycle bike in _motorcycles)
         {
-            Console.Write(bike.ToString());
+            Console.Write(bike);
         }
+
+        CreateLogger();
+        Log.Information(DateTime.UtcNow + " UTC; All bikes are displayed");
     }
 
     public Motorcycle CreateMotorcycle(string name, string model, int year, int odometer)
     {
         Motorcycle motorcycle = new Motorcycle(name, model, year, odometer);
         _motorcycles.Add(motorcycle);
-        Console.WriteLine(
-            $"Motorcycle '{motorcycle.Id}' with name '{motorcycle.Name}' was created and added to the list.");
+
+        CreateLogger();
+        Log.Information(DateTime.UtcNow +
+                        $" UTC; Motorcycle '{motorcycle.Id}' with name '{motorcycle.Name}' was created and added to the list");
+
         return motorcycle;
     }
 
-    public Motorcycle? UpdateMotorcycle(Motorcycle motorcycle, string nameChangeTo, string modelChangeTo,
+    public Motorcycle? UpdateMotorcycle(Guid id, string nameChangeTo, string modelChangeTo,
         int yearChangeTo, int odometerChangeTo)
     {
-        Console.Write(
-            $"Bike '{motorcycle.Id}', {motorcycle} is going to be updated... Wait a second. It's changed to: \n");
         foreach (Motorcycle bike in _motorcycles)
         {
-            if (bike.Id.Equals(motorcycle.Id))
+            if (bike.Id.Equals(id))
             {
                 bike.Name = nameChangeTo;
                 bike.Model = modelChangeTo;
@@ -53,13 +63,80 @@ public class MotorcycleRepository : IMotorcycleRepository
             }
         }
 
-        Console.WriteLine("Something went wrong.");
+        CreateLogger();
+        Log.Error(error);
+        return null;
+    }
+
+    public Motorcycle UpdateMotorcycleName(Guid id, string name)
+    {
+        foreach (Motorcycle bike in _motorcycles)
+        {
+            if (bike.Id.Equals(id))
+            {
+                bike.Name = name;
+                return bike;
+            }
+        }
+
+        CreateLogger();
+        Log.Error(error);
+        return null;
+    }
+
+    public Motorcycle? UpdateMotorcycleModel(Guid id, string model)
+    {
+        foreach (Motorcycle bike in _motorcycles)
+        {
+            if (bike.Id.Equals(id))
+            {
+                bike.Model = model;
+                return bike;
+            }
+        }
+
+        CreateLogger();
+        Log.Error(error);
+        return null;
+    }
+
+    public Motorcycle? UpdateMotorcycleYear(Guid id, int year)
+    {
+        foreach (Motorcycle bike in _motorcycles)
+        {
+            if (bike.Id.Equals(id))
+            {
+                bike.Year = year;
+                return bike;
+            }
+        }
+
+        CreateLogger();
+        Log.Error(error);
+        return null;
+    }
+
+    public Motorcycle? UpdateMotorcycleOdometer(Guid id, int odometer)
+    {
+        foreach (Motorcycle bike in _motorcycles)
+        {
+            if (bike.Id.Equals(id))
+            {
+                bike.Odometer = odometer;
+                return bike;
+            }
+        }
+
+        CreateLogger();
+        Log.Error(error);
         return null;
     }
 
     public void DeleteMotorcycle(Motorcycle motorcycle)
     {
         _motorcycles.Remove(motorcycle);
-        Console.WriteLine($"Motorcycle '{motorcycle.Id}', with name '{motorcycle.Name}' was removed from the list.");
+        CreateLogger();
+        Log.Information(DateTime.UtcNow +
+                        $" UTC; Motorcycle '{motorcycle.Id}', with name '{motorcycle.Name}' was removed from the list");
     }
 }
